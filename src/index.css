@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html::-webkit-scrollbar {
+  width: 0px;
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-padding-top: 5rem;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+}
+
+body {
+  font-family: 'Urbanist', sans-serif;
+  background-color: #181a1f;
+}
+
+.container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1536px;
+}
+.noise {
+  z-index: -20;
+  position: absolute;
+  inset: 0;
+  background-image: url(./assets/noise.webp);
+  opacity: 0.4;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+.noise-container {
+  position: relative;
+  isolation: isolate;
+  background-color: #17191e;
+}
+
+.button.button-white:before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+  --tw-content: '';
+  content: var(--tw-content);
+}
+
+.link {
+  --tw-text-opacity: 1;
+  color: rgb(242 246 250 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+}
+
+.showpopup {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+  transition: all 1.5s ease-in-out;
+}
+
+.noshowpopup {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(1000px);
+  transition: all 1.5s ease-in-out;
+}
+.landing-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  text-align: center;
+}
+
+.landing-section:before {
+  position: absolute;
+  content: '';
+  z-index: -1;
+  top: 0%;
+  bottom: 10%;
+  width: 150%;
+  left: -25%;
+  background: url(./assets/noise.webp) repeat,
+    linear-gradient(83.21deg, #00febe 0%, #ff5500 100%);
+  background-blend-mode: overlay;
+  -webkit-mask-image: radial-gradient(rgba(0, 0, 0, 0.5), transparent 70%);
+  mask-image: radial-gradient(rgba(0, 0, 0, 0.5), transparent 70%);
+}
+
+.bg-grid {
+  background-size: 20px 20px;
+  background-image: linear-gradient(to right, #23262d 1px, transparent 1px),
+    linear-gradient(to bottom, #23262d 1px, transparent 1px);
+  background-position: top center;
+  image-rendering: pixelated;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    10%,
+    white,
+    90%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    10%,
+    white,
+    90%,
+    transparent
+  );
+}
+
+.noise-panel {
+  position: relative;
+  isolation: isolate;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(52 56 65 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(35 38 45 / var(--tw-bg-opacity));
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color),
+    0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.noise-panel:before {
+  position: absolute;
+  inset: 0;
+  z-index: -20;
+  opacity: 0.4;
+  mix-blend-mode: overlay;
+  content: '';
+  background-image: url(./assets/noise.webp);
+}
+.noise-underlay {
+  z-index: -30;
+  position: relative;
+}
+
+.bg-blue-green-gradient {
+  background-image: linear-gradient(247.23deg, #00febe 0%, #ff5500 150%);
+}
+
+.bg-blue-purple-gradient {
+  background-image: linear-gradient(83.21deg, #2f4cb3 0%, #4af2c8 100%);
+}
+
+.bg-red-pink-gradient {
+  background-image: linear-gradient(66.77deg, #d83333 0%, #f041ff 100%);
+}
+
+.heading-3 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  line-height: 1.25;
+  font-size: 32px;
+}
+.heading-2 {
+  font-size: 3.75rem;
+  line-height: 1.25;
+}
+
+.code {
+  font-weight: 300;
+}
+.contact:before {
+  position: absolute;
+  content: '';
+  z-index: -10;
+  top: 25%;
+  height: 150%;
+  width: 150%;
+  left: -25%;
+  background: url(./assets/noise.webp) repeat,
+    linear-gradient(247.23deg, #4af2c8 0%, #2f4cb3 100%);
+  background-blend-mode: overlay;
+  -webkit-mask-image: radial-gradient(rgba(0, 0, 0, 0.7), transparent 70%);
+  mask-image: radial-gradient(rgba(0, 0, 0, 0.7), transparent 70%);
+}
+
+@media (min-width: 1024px) {
+  .contact:before {
+    left: 0%;
+    width: 100%;
+    -webkit-mask-image: radial-gradient(rgba(0, 0, 0, 0.7), transparent 60%);
+    mask-image: radial-gradient(rgba(0, 0, 0, 0.7), transparent 60%);
+  }
+}
+
+.hero-graphic:after {
+  position: absolute;
+  background-image: linear-gradient(83.21deg, #00febe 0%, #ff5500 150%);
+  content: '';
+  width: 150%;
+  height: 150%;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  -webkit-mask-image: radial-gradient(rgba(0, 0, 0, 1), transparent 65%);
+  mask-image: radial-gradient(rgba(0, 0, 0, 1), transparent 65%);
+  z-index: -1;
+}
+
+.quotes:before {
+  position: absolute;
+  background-image: linear-gradient(83.21deg, #00febe 0%, #ff5500 150%);
+  content: '';
+  width: 200%;
+  height: 150%;
+  left: -50%;
+  top: -35%;
+  z-index: -1;
+  background: url(./assets/noise.webp) repeat,
+    linear-gradient(83.21deg, #00febe 0%, #ff5500 150%);
+  background-blend-mode: overlay;
+  -webkit-mask-image: radial-gradient(rgba(0, 0, 0, 1), transparent 70%);
+  mask-image: radial-gradient(rgba(0, 0, 0, 1), transparent 70%);
+}
+
+@media (min-width: 1024px) {
+  .company:before {
+    left: 0%;
+    width: 100%;
+    -webkit-mask-image: radial-gradient(rgba(0, 0, 0, 0.7), transparent 60%);
+    mask-image: radial-gradient(rgba(0, 0, 0, 0.7), transparent 60%);
+  }
+}
+.company:before {
+  position: absolute;
+  right: 0;
+  background-image: linear-gradient(266.93deg, #f8e42e 0%, #ff7d54 100%);
+  content: '';
+  z-index: -1;
+  top: 25%;
+  height: 150%;
+  width: 150%;
+  left: -25%;
+  background: url(./assets/noise.webp) repeat,
+    linear-gradient(266.93deg, #f8e42e 0%, #ff7d54 100%);
+  background-blend-mode: overlay;
+  -webkit-mask-image: radial-gradient(rgba(0, 0, 0, 0.7), transparent 70%);
+  mask-image: radial-gradient(rgba(0, 0, 0, 0.7), transparent 70%);
+}
+
+.text-pink-light {
+  --tw-text-opacity: 1;
+  color: rgb(232 196 249 / var(--tw-text-opacity));
+}
+
+.heading-3 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  line-height: 1.25;
+  font-size: 32px;
+}
+
+.heading-4 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  line-height: 1.25;
+}
