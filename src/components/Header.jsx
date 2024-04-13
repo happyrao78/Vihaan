@@ -22,10 +22,10 @@ const Header = () => {
     });
   }, [auth]);
   return (
-    <div className="sticky top-0 z-20 max-h-screen text-white">
+    <div className=" top-0 z-20 max-h-screen text-white">
       <header className="noise-container shadow-lg">
         <div className="noise"></div>
-        <nav className="px-[1rem] mx-auto w-full max-w-screen-2xl md:px-6 flex h-[5rem] justify-center items-center">
+        <nav className="px-[1rem] mx-auto w-full max-w-screen-2xl md:px-6 flex h-[5rem] justify-center items-center ">
           <Link
             to="/"
             title="Home"

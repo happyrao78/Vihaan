@@ -21,7 +21,7 @@ const Contact = () => {
         </h2>
       </div>
       <a
-        href="mailto:yakshitgarg25@gmail.com"
+        href="mailto:happy.hy0017@gmail.com"
         className="bg-white hover:bg-transparent hover:border hover:border-white hover:text-white transition-all border border-transparent rounded-full font-medium h-[4rem] flex items-center justify-center text-[#17191e] px-10 py-4 text-center text-lg"
       >
         Let's Connect

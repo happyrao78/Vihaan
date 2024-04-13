@@ -13,7 +13,7 @@ html {
   -ms-overflow-style: none;
   scrollbar-width: none;
   scroll-padding-top: 5rem;
-  -webkit-text-size-adjust: 100%;
+  /* -webkit-text-size-adjust: 100%; */
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
@@ -36,9 +36,11 @@ body {
   max-width: 1536px;
 }
 .noise {
-  z-index: -20;
+ 
+  
   position: absolute;
-  inset: 0;
+  top: 0;
+  width:auto;
   background-image: url(./assets/noise.webp);
   opacity: 0.4;
   mix-blend-mode: overlay;
@@ -118,6 +120,8 @@ body {
   -webkit-mask-image: radial-gradient(rgba(0, 0, 0, 0.5), transparent 70%);
   mask-image: radial-gradient(rgba(0, 0, 0, 0.5), transparent 70%);
 }
+
+
 
 .bg-grid {
   background-size: 20px 20px;

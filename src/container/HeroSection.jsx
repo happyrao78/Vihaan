@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { SiAnaconda } from "react-icons/si";
+
 
 const HeroSection = () => {
   return (
@@ -8,9 +10,12 @@ const HeroSection = () => {
       id="home"
     >
       <div className="z-[-30] absolute inset-0"></div>
+      <div className="absolute top-0 left-0 z-[-20] w-[35rem] h-[35rem]">
+        <SiAnaconda className="text-[#00febe] opacity-10 w-full h-full motion-safe:animate-spin-slow" />
+      </div>
       <div className="flex flex-col items-center gap-2">
         <div className="flex items-center justify-center p-4 w-full">
-          <h1 className="text-5xl sm:text-6xl px-2 s:px-4 text-center text-gray-50 lg:text-7xl xl:text-8xl font-bold sm:max-w-4xl uppercase">
+          <h1 className="text-5xl sm:text-6xl px-2 s:px-4 text-center  text-white lg:text-7xl xl:text-8xl font-bold sm:max-w-4xl uppercase select-none hover:text-gray-300 transition ease-in-out duration-500 ">
             I’m not perfect <br className="hidden sm:block" />
             just insured.
           </h1>

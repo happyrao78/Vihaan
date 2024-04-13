@@ -150,7 +150,7 @@ const Footer = () => {
               Terms of Service
             </Link>
             <p className="col-span-2 text-center md:col-span-1 text-white font-medium text-lg">
-              © 2023{' '}
+              © 2024{' '}
               <Link className="link" target="_blank">
                 AALA
               </Link>

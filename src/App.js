@@ -13,9 +13,30 @@ import DriveRecommendation from './pages/DriveRecommendation';
 import HealthQuestionnaire from './pages/HealthQuestionnaire';
 import HealthRecommendation from './pages/HealthRecommendation';
 import CalculatingScore1 from './pages/CalculatingScore1';
+import AnimatedCursor from 'react-animated-cursor';
 // this is a react app 
 const App = () => {
   return (
+    <><AnimatedCursor 
+    innerSize={8}
+    outerSize={30}
+    color="256, 256, 256"
+    outerAlpha={.2}
+    innerScale={0.7}
+    outerScale={3}
+    clickables={[
+      'a',
+      'input[type="text"]',
+      'input[type="email"]',
+      'input[type="number"]',
+      'input[type="submit"]',
+      'input[type="image"]',
+      'label[for]',
+      'select',
+      'textarea',
+      'button',
+      '.link'
+    ]} />
     <Routes>
       <Route exact path="/community" element={<CommunityPage />} />
       <Route exact path="/registration/drive" element={<DriveRegistration />} />
@@ -59,6 +80,7 @@ const App = () => {
         element={<HealthRecommendation/>}
       />
     </Routes>
+    </>
   );
 };
 
