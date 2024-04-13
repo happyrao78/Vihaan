@@ -1,9 +1,29 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { SiAnaconda } from "react-icons/si";
-
+import Typed from 'typed.js'; // Import Typed.js
 
 const HeroSection = () => {
+  const typedRef = useRef(null);
+
+  useEffect(() => {
+    // Options for Typed.js
+    const options = {
+      strings: ["I’m not perfect", "I'm just insured."],
+      typeSpeed: 85,
+      backSpeed: 85,
+      loop: false,
+    };
+
+    // Initialize Typed.js
+    const typed = new Typed(typedRef.current, options);
+
+    // Cleanup function to destroy Typed instance
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
   return (
     <section
       className="landing-section relative overflow-x-hidden pb-40 pt-14 sm:pt-20 lg:pt-32 bg-grid"
@@ -15,9 +35,9 @@ const HeroSection = () => {
       </div>
       <div className="flex flex-col items-center gap-2">
         <div className="flex items-center justify-center p-4 w-full">
+          {/* Replace the static text with a span for Typed.js */}
           <h1 className="text-5xl sm:text-6xl px-2 s:px-4 text-center  text-white lg:text-7xl xl:text-8xl font-bold sm:max-w-4xl uppercase select-none hover:text-gray-300 transition ease-in-out duration-500 ">
-            I’m not perfect <br className="hidden sm:block" />
-            just insured.
+            <span ref={typedRef}></span>
           </h1>
         </div>
         <div className="flex items-center justify-center p-1">
