@@ -46,7 +46,7 @@ const Header = () => {
               Community
             </HashLink>
             <HashLink smooth to="/#team" rel="prefetch" className="link">
-              Team
+              Developer
             </HashLink>
             <HashLink smooth to="/#contact" rel="prefetch" className="link">
               Contact
@@ -150,7 +150,7 @@ const Header = () => {
                 Community
               </HashLink>
               <HashLink smooth to="/#team" rel="prefetch" className="link p-5">
-                Team
+                Developer
               </HashLink>
               <HashLink
                 smooth
