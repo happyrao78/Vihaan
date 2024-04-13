@@ -30,9 +30,10 @@ const HeroSection = () => {
       id="home"
     >
       <div className="z-[-30] absolute inset-0"></div>
-      <div className="absolute top-0 left-0 z-[-20] w-[35rem] h-[35rem]">
-        <SiAnaconda className="text-[#00febe] opacity-10 w-full h-full motion-safe:animate-spin-slow" />
-      </div>
+      <div className="absolute top-0 left-0 z-[-20] w-[35rem] h-[35rem] animate-spin-slow">
+  <SiAnaconda className="text-[#00febe] opacity-10 w-full h-full" />
+</div>
+
       <div className="flex flex-col items-center gap-2">
         <div className="flex items-center justify-center p-4 w-full">
           {/* Replace the static text with a span for Typed.js */}

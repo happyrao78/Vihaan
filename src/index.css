@@ -36,8 +36,6 @@ body {
   max-width: 1536px;
 }
 .noise {
- 
-  
   position: absolute;
   top: 0;
   width:auto;
@@ -280,6 +278,18 @@ body {
   background-blend-mode: overlay;
   -webkit-mask-image: radial-gradient(rgba(0, 0, 0, 0.7), transparent 70%);
   mask-image: radial-gradient(rgba(0, 0, 0, 0.7), transparent 70%);
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin 35s linear infinite; /* Adjust duration and timing function as needed */
 }
 
 .text-pink-light {
